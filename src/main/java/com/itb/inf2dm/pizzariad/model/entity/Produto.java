@@ -1,12 +1,27 @@
 package com.itb.inf2dm.pizzariad.model.entity;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Produto") // Caso o nome da classe for o mesmo da tabela, o @table é opcional
+
+
 public class Produto {
+    @Id // pk
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 100, nullable = false)
     private String nome;
+    @Column(length = 45, nullable = true)
     private String tipo;
+    @Column(length = 250, nullable = true)
     private String descricao;
-    private Double valorCompra;
-    private Double valorVenda;
+    @Column(nullable = true, columnDefinition = "DECIMAL(5,2)")
+    private double valorCompra;
+    @Column(nullable = true, columnDefinition = "DECIMAL(5,2)")
+    private double valorVenda;
+    @Column(nullable = true)
     private int quantidadeEstoque;
     private boolean codstatus;
 
@@ -42,7 +57,7 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public Double getValorCompra() {
+    public double getValorCompra() {
         return valorCompra;
     }
 
@@ -50,7 +65,7 @@ public class Produto {
         this.valorCompra = valorCompra;
     }
 
-    public Double getValorVenda() {
+    public double getValorVenda() {
         return valorVenda;
     }
 
@@ -73,4 +88,5 @@ public class Produto {
     public void setCodstatus(boolean codstatus) {
         this.codstatus = codstatus;
     }
+
 }

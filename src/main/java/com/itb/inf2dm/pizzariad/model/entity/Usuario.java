@@ -1,16 +1,34 @@
 package com.itb.inf2dm.pizzariad.model.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Usuario")
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 100, nullable = false)
     private String nome;
+    @Column(length = 45, nullable = true)
     private String email;
+    @Column(length = 225, nullable = true)
     private String senha;
+    @Column(length = 45, nullable = true)
+    private String tipoUsuario;
+    @Column(length = 15, nullable = false)
     private String cpf;
+    @Column(length = 20, nullable = false)
     private String sexo;
+    @Column(length = 45, nullable = false)
     private String logradouro;
+    @Column(length = 10, nullable = false)
     private String cep;
+    @Column(length = 45, nullable = false)
     private String bairro;
+    @Column(length = 45, nullable = false)
     private String cidade;
+    @Column(length = 2)
     private String uf;
     private boolean codstatus;
 
@@ -108,6 +126,14 @@ public class Usuario {
 
     public void setCodstatus(boolean codstatus) {
         this.codstatus = codstatus;
+    }
+
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 }
 
