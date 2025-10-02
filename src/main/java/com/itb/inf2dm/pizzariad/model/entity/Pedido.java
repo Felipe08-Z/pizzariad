@@ -19,7 +19,7 @@ public class Pedido {
     private LocalDateTime dataHoraentrega;
     @Column(length = 20, nullable = false)
     private String status;
-    private boolean codstatus;
+    private boolean codStatus;
     private Long clienteId;
 
     public Long getId() {
@@ -62,12 +62,12 @@ public class Pedido {
         this.status = status;
     }
 
-    public boolean isCodstatus() {
-        return codstatus;
+    public boolean isCodStatus() {
+        return codStatus;
     }
 
-    public void setCodstatus(boolean codstatus) {
-        this.codstatus = codstatus;
+    public void setCodStatus(boolean codStatus) {
+        this.codStatus = codStatus;
     }
 
     public Long getClienteId() {

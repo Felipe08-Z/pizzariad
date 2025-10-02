@@ -11,7 +11,7 @@ public class Categoria {
     private String nome;
     @Column(length = 100, nullable = true)
     private String descricao;
-    private boolean codstatus;
+    private boolean codStatus;
 
     public Long getId() {
         return id;
@@ -37,12 +37,12 @@ public class Categoria {
         this.descricao = descricao;
     }
 
-    public boolean isCodstatus() {
-        return codstatus;
+    public boolean isCodStatus() {
+        return codStatus;
     }
 
-    public void setCodstatus(boolean codstatus) {
-        this.codstatus = codstatus;
+    public void setCodStatus(boolean codStatus) {
+        this.codStatus = codStatus;
     }
 
     public void setTamanho(String ighsg) {

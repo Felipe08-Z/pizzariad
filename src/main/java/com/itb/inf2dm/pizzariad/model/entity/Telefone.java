@@ -10,7 +10,7 @@ public class Telefone {
     private String ddd;
     @Column(length = 15, nullable = true)
     private String numero;
-    private boolean codstatus;
+    private boolean codStatus;
 
     public String getDdd() {
         return ddd;
@@ -36,11 +36,11 @@ public class Telefone {
         this.numero = numero;
     }
 
-    public boolean isCodstatus() {
-        return codstatus;
+    public boolean isCodStatus() {
+        return codStatus;
     }
 
-    public void setCodstatus(boolean codstatus) {
-        this.codstatus = codstatus;
+    public void setCodStatus(boolean codStatus) {
+        this.codStatus = codStatus;
     }
 }

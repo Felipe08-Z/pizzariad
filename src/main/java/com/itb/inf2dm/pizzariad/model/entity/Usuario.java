@@ -30,7 +30,7 @@ public class Usuario {
     private String cidade;
     @Column(length = 2)
     private String uf;
-    private boolean codstatus;
+    private boolean codStatus;
 
     public Long getId() {
         return id;
@@ -120,12 +120,12 @@ public class Usuario {
         this.uf = uf;
     }
 
-    public boolean isCodstatus() {
-        return codstatus;
+    public boolean isCodStatus() {
+        return codStatus;
     }
 
-    public void setCodstatus(boolean codstatus) {
-        this.codstatus = codstatus;
+    public void setCodStatus(boolean codStatus) {
+        this.codStatus = codStatus;
     }
 
     public String getTipoUsuario() {

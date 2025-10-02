@@ -10,7 +10,7 @@ public class ItemPedido {
     private int quantidadeItems;
     @Column(columnDefinition = "DECIMAL (5,2)", nullable = false)
     private double valorUnitario;
-    private boolean sodstatus;
+    private boolean codstatus;
 
     public Long getId() {
         return id;
@@ -36,11 +36,11 @@ public class ItemPedido {
         this.valorUnitario = valorUnitario;
     }
 
-    public boolean isSodstatus() {
-        return sodstatus;
+    public boolean isCodstatus() {
+        return codstatus;
     }
 
-    public void setSodstatus(boolean sodstatus) {
-        this.sodstatus = sodstatus;
+    public void setCodstatus(boolean codstatus) {
+        this.codstatus = codstatus;
     }
 }

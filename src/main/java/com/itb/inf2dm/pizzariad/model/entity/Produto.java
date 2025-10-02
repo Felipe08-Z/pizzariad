@@ -23,7 +23,7 @@ public class Produto {
     private double valorVenda;
     @Column(nullable = true)
     private int quantidadeEstoque;
-    private boolean codstatus;
+    private boolean codStatus;
 
     public Long getId() {
         return id;
@@ -81,12 +81,11 @@ public class Produto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public boolean isCodstatus() {
-        return codstatus;
+    public boolean codStatus() {
+        return codStatus;
     }
 
-    public void setCodstatus(boolean codstatus) {
-        this.codstatus = codstatus;
+    public void setCodStatus(boolean codStatus) {
+        this.codStatus = codStatus;
     }
-
 }
